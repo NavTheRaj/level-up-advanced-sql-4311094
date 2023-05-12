@@ -4,4 +4,4 @@ FROM employee emp
 INNER JOIN sales s
 ON emp.employeeID = s.employeeID
 WHERE s.soldDate >= date('now','start of year')
-GROUP BY emp.employeeID;
+GROUP BY emp.employeeID,emp.firstName,emp.lastName;
